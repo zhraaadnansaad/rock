@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لعبة الحجر، الورقة، المقص</title>
+
+    <!-- إضافة مكتبة Font Awesome مباشرة من الإنترنت -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>لعبة الحجر، الورقة، المقص</h1>
+      <p>اختر أحد الخيارات لتبدأ اللعبة!</p>
+
+      <!-- الأزرار مع الأيقونات -->
+      <div class="buttons">
+        <button class="button" onclick="play('rock')">
+          <i class="fas fa-hand-rock icon"></i> حجر
+        </button>
+        <button class="button" onclick="play('paper')">
+          <i class="fas fa-hand-paper icon"></i> ورقة
+        </button>
+        <button class="button" onclick="play('scissors')">
+          <i class="fas fa-cut icon"></i> مقص
+        </button>
+      </div>
+
+      <!-- النتيجة وعرض الاختيارات -->
+      <div id="result"></div>
+      <div class="choice">
+        <p id="playerChoice"></p>
+        <p id="computerChoice"></p>
+      </div>
+
+      <!-- النقاط -->
+      <p id="playerScore">نقاطك: 0</p>
+      <p id="computerScore">نقاط الكمبيوتر: 0</p>
+
+      <!-- زر إعادة اللعبة -->
+      <button class="button" onclick="resetGame()">إعادة اللعبة</button>
+
+      <!-- المؤقت الزمني -->
+      <p id="timer">الوقت المتبقي: 10 ثواني</p>
+
+      <!-- الرسالة التحفيزية -->
+      <p id="motivationalMessage"></p>
+
+      <!-- الأصوات -->
+      <audio id="winSound" src="sounds/win-sound.mp3" preload="auto"></audio>
+      <audio id="loseSound" src="sounds/lose-sound.mp3" preload="auto"></audio>
+    </div>
+
+    <!-- رسالة للمطور -->
+    <footer>
+      <p>تم تطوير هذه اللعبة بواسطة زهراء عدنان سعدي</p>
+      <p>شكرًا للعب! استمتع باللعبة.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

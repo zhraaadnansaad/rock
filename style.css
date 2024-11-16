@@ -1,0 +1,146 @@
+/* تصميم عام */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #ecf0f1; /* خلفية الصفحة */
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* منطقة اللعب */
+  .game-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    background-image: url('images/game-background.jpg'); /* خلفية منطقة اللعبة */
+    background-size: cover;
+    background-position: center;
+    color: white; /* لتوضيح النص في خلفية داكنة */
+  }
+  
+  /* تغيير اللون حسب النتيجة */
+  body.win {
+    background-color: #2ecc71; /* فوز */
+  }
+  
+  body.lose {
+    background-color: #e74c3c; /* خسارة */
+  }
+  
+  body.tie {
+    background-color: #f39c12; /* تعادل */
+  }
+  
+  h1 {
+    color: #2c3e50;
+    font-size: 2em;
+  }
+  
+  p {
+    font-size: 1.2em;
+    color: #fff;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* تنسيق الأيقونات بجانب النص */
+  .icon {
+    margin-left: 10px;
+    font-size: 1.5em; /* لتكبير الأيقونات قليلاً */
+  }
+  
+  /* النتائج والنقاط */
+  #result {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #2ecc71;
+  }
+  
+  .choice p {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  #playerScore, #computerScore {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  #timer {
+    font-size: 1.2em;
+    color: #e74c3c;
+  }
+  
+  /* تصميم الرسالة التحفيزية */
+  #motivationalMessage {
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  /* تصميم الاستجابة للأجهزة الصغيرة */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5em;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .button {
+      width: 80%;
+      font-size: 1.1em;
+    }
+  
+    .icon {
+      width: 25px;
+      height: 25px;
+    }
+  
+    #result, #playerScore, #computerScore, #timer {
+      font-size: 1.1em;
+    }
+  }
+  
+  /* تصميم الرسالة للمطور */
+  footer {
+    margin-top: 30px;
+    background-color: #34495e;
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
